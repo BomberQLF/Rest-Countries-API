@@ -10,7 +10,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="p-4 sm:p-6 lg:p-8 ">
+        <nav className="p-4 sm:py-6 sm:px-20">
             <ul className="flex justify-between">
                 <li className="text-sm font-medium sm:text-lg">Where in the world?</li>
                 <li>
