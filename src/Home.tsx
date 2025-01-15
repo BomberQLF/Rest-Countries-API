@@ -1,12 +1,14 @@
 import Navbar from "./Components/Navbar";
+import SearchBar from "./Components/SearchBar";
 
-const App = () => {
+const Home = () => {
 
   return (
     <div className="app">
       < Navbar />
+      < SearchBar />
     </div>
   )
 }
 
-export default App;
+export default Home;
