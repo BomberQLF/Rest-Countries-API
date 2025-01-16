@@ -1,12 +1,14 @@
 import Navbar from "./Components/Navbar";
-import SearchBar from "./Components/SearchBar";
+import Headings from "./Components/Headings";
+import ListCountries from "./Components/ListCountries";
 
 const Home = () => {
 
   return (
     <div className="app">
       < Navbar />
-      < SearchBar />
+      < Headings />
+      < ListCountries />
     </div>
   )
 }

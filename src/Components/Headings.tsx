@@ -3,7 +3,7 @@ import SeachIcon from '../assets/search.svg';
 import Filter from "./Filter";
 
 
-const SearchBar = () => {
+const Headings = () => {
 
 const [searchInput, setSearchInput] = useState(null);
 
@@ -26,4 +26,4 @@ const handleInput = (e:any): void => {
     )
 }
 
-export default SearchBar;
+export default Headings;
