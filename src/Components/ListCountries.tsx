@@ -13,6 +13,9 @@ interface ListCountriesProps {
     selectedFilter: string | null;
 }
 
+// Les paramètres servent ici à pouvoir transférer aux composants enfants certaines function
+// Tout est controlé ici car c'est ici qu'on fetch les pays et qu'on peut ducoup les comparé avec les filtres séléctionnés
+
 const ListCountries = ({ searchInput, selectedFilter }: ListCountriesProps): JSX.Element => {
     const [countries, setCountries] = useState<Country[]>([]);
 
