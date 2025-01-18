@@ -19,17 +19,17 @@ const Headings = () => {
     return (
         <div>
             <div className="search-bar sm:flex sm:items-center sm:justify-between">
-                <div className="searchbar flex gap-4 mx-8 my-12 px-8 py-4 bg-white shadow-[0px_0px_6px_1px_rgba(181,181,181,1)] lg:w-[400px]">
+                <div className="searchbar flex gap-4 mx-8 my-12 px-8 py-4 bg-[#2B3844] lg:w-[400px]">
                     <img src={SearchIcon} alt="Search Icon" />
                     <input
-                        className="border-none bg-transparent focus:outline-none"
+                        className="border-none bg-transparent focus:outline-none text-white"
                         type="text"
                         id="search"
                         placeholder="Search for a country..."
                         onChange={handleInput}
                     />
                 </div>
-                <div className="filter-container py-4 px-8 mx-8 bg-white shadow-[0px_0px_6px_1px_rgba(181,181,181,1)] w-[200px]">
+                <div className="filter-container py-4 px-8 mx-8 bg-[#2B3844] w-[200px]">
                     <Filter onFilterChange={handleFilterChange} />
                 </div>
             </div>

@@ -15,13 +15,13 @@ const Filter = ({ onFilterChange }: FilterProps) => {
                     onChange={handleChange}
                     name="filter"
                     id="filter"
-                    className="border-none outline-none font-light"
+                    className="border-none outline-none font-light bg-[#2B3844] text-white"
                 >
                     <option value="" disabled selected>
                         Filter by Region
                     </option>
                     <option value="Africa">Africa</option>
-                    <option value="America">America</option>
+                    <option value="Americas">America</option>
                     <option value="Asia">Asia</option>
                     <option value="Europe">Europe</option>
                     <option value="Oceania">Oceania</option>
