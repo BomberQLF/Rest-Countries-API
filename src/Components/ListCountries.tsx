@@ -50,17 +50,17 @@ const ListCountries = ({ searchInput, selectedFilter }: ListCountriesProps): JSX
 
     const countryList = filteredCountries.map((country: Country, index: number) => (
         <div key={index} className="country-container p-10">
-            <div className="country-item bg-white hover:cursor-pointer">
+            <div className="country-item bg-[#2B3844] hover:cursor-pointer">
                 <img src={country.flags.svg} alt={`${country.name} flag`} />
                 <div className="country-info p-8">
-                    <h1 className="country font-black mb-3">{country.name}</h1>
-                    <p>
+                    <h1 className="country font-black mb-3 text-white" >{country.name}</h1>
+                    <p className="text-white">
                         Population: <span className="font-extralight">{country.population}</span>
                     </p>
-                    <p>
+                    <p className="text-white">
                         Region: <span className="font-extralight">{country.region}</span>
                     </p>
-                    <p>
+                    <p className="text-white">
                         Capital: <span className="font-extralight">{country.capital}</span>
                     </p>
                 </div>
@@ -70,7 +70,7 @@ const ListCountries = ({ searchInput, selectedFilter }: ListCountriesProps): JSX
 
     return (
         <div className="big-country-container grid gap-10 p-5 grid-cols-1 sm:grid-cols-3 md:grid-cols-4">
-            {filteredCountries.length > 0 ? countryList : <p>Loading...</p>}
+            {filteredCountries.length > 0 ? countryList : <p className="text-white">Loading...</p>}
         </div>
     );
 };
