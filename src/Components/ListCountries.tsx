@@ -51,6 +51,7 @@ const ListCountries = ({ searchInput, selectedFilter }: ListCountriesProps): JSX
      const countryList = filteredCountries.map((country: Country, index: number) => (
         <div key={index} className="country-container p-10">
             {/* Link to the detail page */}
+            {/* Le state ici nous permet de transférer les données des PAYS à un autre composant sur lequel on est renvoyé !!! TROP FORT COMME TRUC */}
             <Link to={`/country/${index}`} state={country} className="country-item bg-[#2B3844] hover:cursor-pointer">
                 <img src={country.flags.svg} alt={`${country.name} flag`} />
                 <div className="country-info p-8 bg-[#2B3844]" >
