@@ -34,7 +34,7 @@ const Headings = () => {
                 </div>
             </div>
 
-            <ListCountries searchInput={searchInput} selectedFilter={selectedFilter} />
+            <ListCountries searchInput={searchInput} selectedFilter={selectedFilter} country={null}  />
         </div>
     );
 };
