@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface Country {
     name: string;
@@ -9,8 +10,9 @@ interface Country {
 }
 
 interface ListCountriesProps {
-    searchInput: string | null; 
+    searchInput: string | null;
     selectedFilter: string | null;
+    country: Array<JSX.Element> | null;
 }
 
 // Les paramètres servent ici à pouvoir transférer aux composants enfants certaines function
@@ -34,26 +36,25 @@ const ListCountries = ({ searchInput, selectedFilter }: ListCountriesProps): JSX
         };
 
         fetchCountries();
-    }, []);
+    }, []);    
 
-    // Filtre par région
     const filteredByRegion = selectedFilter
         ? countries.filter((country) => country.region === selectedFilter)
         : countries;
 
-    // Filtre par recherche
     const filteredCountries = searchInput
         ? filteredByRegion.filter((country) =>
-              country.name.toLowerCase().includes(searchInput.toLowerCase())
-          )
+            country.name.toLowerCase().includes(searchInput.toLowerCase())
+        )
         : filteredByRegion;
 
-    const countryList = filteredCountries.map((country: Country, index: number) => (
+     const countryList = filteredCountries.map((country: Country, index: number) => (
         <div key={index} className="country-container p-10">
-            <div className="country-item bg-[#2B3844] hover:cursor-pointer">
+            {/* Link to the detail page */}
+            <Link to={`/country/${index}`} state={country} className="country-item bg-[#2B3844] hover:cursor-pointer">
                 <img src={country.flags.svg} alt={`${country.name} flag`} />
-                <div className="country-info p-8">
-                    <h1 className="country font-black mb-3 text-white" >{country.name}</h1>
+                <div className="country-info p-8 bg-[#2B3844]" >
+                    <h1 className="country font-black mb-3 text-white">{country.name}</h1>
                     <p className="text-white">
                         Population: <span className="font-extralight">{country.population}</span>
                     </p>
@@ -64,7 +65,8 @@ const ListCountries = ({ searchInput, selectedFilter }: ListCountriesProps): JSX
                         Capital: <span className="font-extralight">{country.capital}</span>
                     </p>
                 </div>
-            </div>
+            </Link>
+
         </div>
     ));
 
