@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
-import ListCountries from "./ListCountries";
+import { useParams } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
 const CountryDetail = () => {
