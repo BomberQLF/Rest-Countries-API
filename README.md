@@ -1,50 +1,110 @@
-# React + TypeScript + Vite
+# Country Info Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application to explore country information using data from a JSON API. You can:
+- View country details (name, population, region, capital, etc.).
+- Search for a country by name.
+- Filter countries by continent.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+1. **Home Page:**
+   - Displays a list of all countries with their flags and basic information.
+   - Search bar for filtering countries by name.
+   - Dropdown to filter countries by continent (e.g., Europe, Asia, Africa, etc.).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. **Country Details Page:**
+   - Shows detailed information about a selected country:
+     - Population
+     - Region
+     - Subregion
+     - Capital
+     - Border countries
+   - Allows navigation to neighboring countries by clicking on the borders.
 
-- Configure the top-level `parserOptions` property like this:
+3. **Responsive Design:**
+   - Works seamlessly on desktop and mobile devices.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation Guide
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Prerequisites
+Make sure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [Git](https://git-scm.com/)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Steps to Install Locally
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/country-info-viewer.git
+   cd country-info-viewer
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the Application:**
+   ```bash
+   npm start
+   ```
+   The application will be available at `http://localhost:3000`.
+
+4. **Build for Production:**
+   To create a production build, run:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## How to Use
+
+1. **Search for a Country:**
+   - Use the search bar on the home page to find a country by name.
+
+2. **Filter by Continent:**
+   - Use the dropdown menu to filter countries by a specific continent.
+
+3. **View Country Details:**
+   - Click on a country card to view its detailed information.
+
+4. **Explore Neighboring Countries:**
+   - On the country detail page, click on a border country to navigate to its details.
+
+---
+
+## Technologies Used
+
+- **Frontend:** React.js
+- **Routing:** React Router DOM
+- **Styling:** Tailwind CSS
+- **Data Source:** REST Countries API (or a local JSON file)
+
+---
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add a new feature"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature-name
+   ```
+5. Create a pull request on GitHub.
+
+---
+
+## License
+This project is licensed under the MIT License.
